@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+<p>
+  <strong>Area name:</strong>
+  <%= @area.area_name %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @area.postcode %>
+</p>
+
+<p>
+  <% @area.suppliers.each do|supplier|%>
+		<br>
+		<%=image_tag(supplier.image,:size=>"80x50")%>
+		<%= supplier.supplier_name  %>
+		
+		</br>
+	<%end%>	
+</p>
+
+<%= link_to 'Edit', edit_area_path(@area) %> |
+<%= link_to 'Back', areas_path %>
+</div>

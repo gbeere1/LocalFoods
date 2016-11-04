@@ -1,0 +1,72 @@
+
+
+<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+<p>
+  <strong>Product:</strong>
+  <%=image_tag(@product.image,:size=>"80x50")%>
+</p>
+
+
+<p>
+  <strong>Product name:</strong>
+  <%= @product.product_name %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @product.supplier.supplier_name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @product.quantity %>
+</p>
+<br>
+
+<button type="button" class="btn-success btn-lg"> 
+ <%= link_to "Buy Product", new_order_path %>
+</button>
+
+
+<h2>Ratings and Comments:</h2>
+	<%=form_for([@product,Comment.new]) do |f| %>
+	<h3><%=f.label :stars %>
+	<% stars = [1,2,3,4,5] %>
+	<% stars.each do |star| %>
+		<%=f.radio_button :stars, star %> <%=star%>
+	<%end%>
+	</h3></br>
+	<%=f.text_area :content, :rows => 4, :cols => 40 %>
+	<div class="actions">
+		<%=f.submit "Post a Comment"%>
+	</div>
+<%end%>
+
+<% if @product.comments.empty? %>
+	<h3>You are the first reviewer of this product!</h3>
+<% else %>
+	<h2>Other Reviews:</h2>
+	<%@product.comments.reverse.each do |comment|%>
+		<p><%=comment.content%>
+		Posted <%=time_ago_in_words(comment.created_at) %> ago by
+		<%=comment.customer.customer_name %> </p>
+	
+	<% end %>
+	<h3>Star Rating</h3>
+	<p>
+		<%=number_with_precision( @product.average_stars, precision:0) %>
+	</p>
+	
+<% end %>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
+</div>
+
+

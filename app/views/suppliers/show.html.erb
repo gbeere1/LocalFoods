@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+<p>
+<div class="container-fluid">  
+  <%=image_tag(@supplier.image,:size=>"120x90")%>
+</p>
+<p>
+  <strong>Supplier name:</strong>
+  <%= @supplier.supplier_name %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @supplier.area.area_name %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @supplier.password_digest %>
+</p>
+
+<p>
+  <% @supplier.products.each do|product|%>
+		<br>
+		<%=image_tag(product.image,:size=>"80x50")%>
+		<%= product.product_name  %>
+		
+		
+		</br>
+	<%end%>	
+</p>
+
+
+<%= link_to 'Edit', edit_supplier_path(@supplier) %> |
+<%= link_to 'Back', suppliers_path %>
+</div>

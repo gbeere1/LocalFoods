@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Localfoods</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+   <div id = "banner">
+        <%=image_tag("local_food.jpg",:size=>"140x50")%>
+		<%="Food We Love"%>
+	
+   </div>
+
+  <div id="nav">
+
+     <ul class="nav nav-tabs">
+	     <li class = "active"><%=link_to "Home",root_path %></li>
+		 <li class = "active"><%=link_to "Products", products_path %></li>
+		 <li class = "active"><%=link_to "Supplier", suppliers_path %></li>
+		 <li class = "active"><%=link_to "Areas", areas_path %></li>
+         <li class = "active"><%=link_to "Customer", customers_path %></li>
+		 <% if !signed_in?%>
+			<li><%=link_to "Sign In", login_path %></li>
+		 <% else %>
+		    <li>Signed in as: <%=@current_customer.customer_name %> </li><br>
+			<li class = "active"><%=Time.now.strftime("%d/%m/%Y %H:%M")%></li>
+			<li ><%= link_to "Sign Out", logout_path %></li>
+		<%end%>
+		
+	</ul>
+
+  </div>
+
+  <%= yield %>
+
+</body>
+</html>

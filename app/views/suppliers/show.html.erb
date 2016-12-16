@@ -1,0 +1,36 @@
+
+<p>
+<div class="container-fluid">  
+<div align="center">
+  <%=image_tag(@supplier.attachment,:size=>"140x100")%>
+</p>
+<p>
+  <strong>Supplier name:</strong>
+  <%= @supplier.supplier_name %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @supplier.area.area_name %>
+</p>
+
+
+
+
+<h3> Products Sold: </h3>
+<p>
+  <% @supplier.products.each do|product|%>
+		<br>
+		
+		<h4><%= product.product_name  %></h4><br>
+		<%=image_tag(product.attachment,:size=>"120x80")%>
+		
+		</br>
+	<%end%>	
+</p>
+
+
+<%= link_to 'Edit', edit_supplier_path(@supplier) %> |
+<%= link_to 'Back', suppliers_path %>
+</div>
+</div>

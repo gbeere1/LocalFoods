@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<div class="container-fluid">
+	<html>
+	<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 40%;
+      margin: auto;
+  }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img src="assets/barrow.jpg" alt="Grow Local" width="660" height="345">
+        <div class="carousel-caption">
+          <h3>Grown Locally</h3>
+          <p>Start selling your own homegrown.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="assets/carrott.jpg" alt="Fresh Carrots" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Fresh Carrots</h3>
+         
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="assets/freshfood.jpg" alt="Variety" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Grow Anything!</h3>
+          
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="assets/johnr.jpg" alt="Our Farmer" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Our Community is growing</h3>
+          <p>John, Kildare "Farmings always been my passion".</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+</body>
+	
+		<div id = "typography">
+			<div align="center">
+ 
+
+			
+			<h1 class="display-2">Local Foods</h1>
+			<br><br>
+			<h4> Website designed by Gavin Beere <br><br>
+			
+			Click <a href="https://github.com/gbeere1/LocalFoods"><u> here </u></a> to go to my github site.
+			</h4> <br> <br>
+           <p> New Customer? <%= link_to "Sign up now!", new_customer_path%></p>
+			<br>
+			<h4>"Local food", "local food movement" or the "Locavores" 
+			are a movement which aim to connect <br>food producers and food 
+			consumers in the same geographic region; in order to develop 
+			more <br>self-reliant and resilient food networks, improve local economies,
+			or for health, environmental,<br> community, or social impact in a particular place.</h4>
+			<br>
+			<br>
+			
+			<h2> Our Headquarters: </h3>
+			<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{53.154527}%2C#{-6.072769}" %>
+			<br><br>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+	</html>
+</div>

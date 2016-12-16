@@ -1,0 +1,33 @@
+
+<div class="container-fluid">
+<br><br>
+<div align="center">
+<p>
+  <strong>Area name:</strong>
+  <%= @area.area_name %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @area.postcode %>
+</p>
+
+
+<br>
+<p>
+ <h4> Suppliers in this area: </h4>
+  <% @area.suppliers.each do|supplier|%>
+		<br>
+		<%=image_tag(supplier.image,:size=>"120x90")%>
+		<%= supplier.supplier_name  %>
+		
+		</br>
+	<%end%>	
+</p>
+<br>
+	<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@area.latitude}%2C#{@area.longitude}" %>
+<br>
+<h3><%= link_to 'Edit', edit_area_path(@area) %> |
+<%= link_to 'Back', areas_path %></h3>
+</div>
+</div>

@@ -1,0 +1,50 @@
+
+<div class="container-fluid">
+<div align="center">
+
+<p>
+  		<br>
+		<strong>Profiler:</strong><br><br>
+		<%=image_tag(@customer.attachment,:size=>"140x100")%>
+	
+</p>
+
+<p>
+<br>
+  <strong>Customer name:</strong>
+  <%= @customer.customer_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @customer.address %>
+</p>
+
+
+
+<p>
+  <strong>Area:</strong>
+  <%= @customer.area %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @customer.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @customer.email %>
+</p>
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@customer.latitude}%2C#{@customer.longitude}" %>
+
+
+<br>
+
+ 
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>
+
+</div>
+</div>

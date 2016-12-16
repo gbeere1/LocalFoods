@@ -1,0 +1,34 @@
+
+	<div class="container">
+		<h1>Suppliers</h1>
+
+			<table class = "table table-bordered">
+				<thead>
+					<tr class="info">
+						<th>             </th>
+						<th>Supplier Name</th>
+						<th>Area</th>
+						
+						<th colspan="4"></th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<% @suppliers.each do |supplier| %>
+						<tr class="success">
+							<td><%=image_tag(supplier.attachment,:size=>"140x100")%></td>
+							<td><%= supplier.supplier_name %></td>
+							<td><%= supplier.area.area_name %></td>
+							
+        
+							<td><%= link_to 'Show', supplier %></td>
+							<td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
+							<td><%= link_to 'Destroy', supplier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+
+			<br>
+
+<strong><%= link_to 'New Supplier', new_supplier_path %></strong

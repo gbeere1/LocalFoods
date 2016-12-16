@@ -11,7 +11,10 @@ class CustomersController < ApplicationController
   # GET /customers/1
   # GET /customers/1.json
   def show
+<<<<<<< HEAD
 	@customer = Customer.find(params[:id])
+=======
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
   end
 
   # GET /customers/new
@@ -30,23 +33,36 @@ class CustomersController < ApplicationController
 
     respond_to do |format|
       if @customer.save
+<<<<<<< HEAD
         #Usermailer.welcome(@customer).deliver_now
 		format.html { redirect_to @customer, notice: '******Customer was successfully created.******' }
         format.json { render :show, status: :created, location: @customer }
 		
+=======
+        format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
+        format.json { render :show, status: :created, location: @customer }
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
       else
         format.html { render :new }
         format.json { render json: @customer.errors, status: :unprocessable_entity }
       end
     end
+<<<<<<< HEAD
 end
+=======
+  end
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 
   # PATCH/PUT /customers/1
   # PATCH/PUT /customers/1.json
   def update
     respond_to do |format|
       if @customer.update(customer_params)
+<<<<<<< HEAD
         format.html { redirect_to @customer, notice: '******Customer was successfully updated.******' }
+=======
+        format.html { redirect_to @customer, notice: 'Customer was successfully updated.' }
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
         format.json { render :show, status: :ok, location: @customer }
       else
         format.html { render :edit }
@@ -60,7 +76,11 @@ end
   def destroy
     @customer.destroy
     respond_to do |format|
+<<<<<<< HEAD
       format.html { redirect_to customers_url, notice: '******Customer was successfully destroyed.******' }
+=======
+      format.html { redirect_to customers_url, notice: 'Customer was successfully destroyed.' }
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
       format.json { head :no_content }
     end
   end
@@ -73,6 +93,10 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
+<<<<<<< HEAD
       params.require(:customer).permit(:customer_name, :address, :area, :phone, :email, :password, :password_confirmation, :latitude, :longitude, :attachment)
+=======
+      params.require(:customer).permit(:customer_name, :address, :area, :phone, :email, :password, :password_confirmation)
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
     end
 end

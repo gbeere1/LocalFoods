@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 
 <div class="container-fluid">
 <br><br>
 <div align="center">
+=======
+<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 <p>
   <strong>Area name:</strong>
   <%= @area.area_name %>
@@ -12,6 +17,7 @@
   <%= @area.postcode %>
 </p>
 
+<<<<<<< HEAD
 
 <br>
 <p>
@@ -19,15 +25,27 @@
   <% @area.suppliers.each do|supplier|%>
 		<br>
 		<%=image_tag(supplier.image,:size=>"120x90")%>
+=======
+<p>
+  <% @area.suppliers.each do|supplier|%>
+		<br>
+		<%=image_tag(supplier.image,:size=>"80x50")%>
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 		<%= supplier.supplier_name  %>
 		
 		</br>
 	<%end%>	
 </p>
+<<<<<<< HEAD
 <br>
 	<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@area.latitude}%2C#{@area.longitude}" %>
 <br>
 <h3><%= link_to 'Edit', edit_area_path(@area) %> |
 <%= link_to 'Back', areas_path %></h3>
 </div>
+=======
+
+<%= link_to 'Edit', edit_area_path(@area) %> |
+<%= link_to 'Back', areas_path %>
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 </div>

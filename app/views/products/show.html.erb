@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 <% flash.each do|key, value| %>
 	<div class="flash<%=key%>">
 		<%=value%>
@@ -12,6 +13,13 @@
 <p>
   <strong>Product:</strong>
   <%=image_tag(@product.attachment,:size=>"80x50")%>
+=======
+<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+<p>
+  <strong>Product:</strong>
+  <%=image_tag(@product.image,:size=>"80x50")%>
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 </p>
 
 
@@ -36,6 +44,12 @@
 </p>
 <br>
 
+<<<<<<< HEAD
+=======
+<button type="button" class="btn-success btn-lg"> 
+ <%= link_to "Buy Product", new_order_path %>
+</button>
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 
 
 <h2>Ratings and Comments:</h2>

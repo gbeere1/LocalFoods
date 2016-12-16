@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<p id="notice"><%= notice %></p>
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 	<div class="container">
 		<h1>Suppliers</h1>
 
@@ -16,7 +20,11 @@
 				<tbody>
 					<% @suppliers.each do |supplier| %>
 						<tr class="success">
+<<<<<<< HEAD
 							<td><%=image_tag(supplier.attachment,:size=>"140x100")%></td>
+=======
+							<td><%=image_tag(supplier.image,:size=>"120x90")%></td>
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 							<td><%= supplier.supplier_name %></td>
 							<td><%= supplier.area.area_name %></td>
 							

@@ -21,6 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :password %><br>
+<<<<<<< HEAD
     <%= f.password_field :password %>
   </div>
   <div class="field">
@@ -30,6 +31,13 @@
   <div class="field">
     <%= f.label :attachment %><br>
     <%= f.file_field :attachment %>
+=======
+    <%= f.text_field :password_digest %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
   </div>
   <div class="actions">
     <%= f.submit %>

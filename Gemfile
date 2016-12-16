@@ -3,8 +3,11 @@ source 'http://rubygems.org'
 gem 'coffee-script-source','1.8.0'
 
 
+<<<<<<< HEAD
 gem 'geocoder'
 gem 'carrierwave'
+=======
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

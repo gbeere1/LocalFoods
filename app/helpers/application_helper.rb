@@ -13,6 +13,7 @@ def euro(amount)
 end
 
 
+<<<<<<< HEAD
 def suppliersigned_in?
 	if session[:supplier_id].nil?
 	
@@ -22,4 +23,6 @@ def suppliersigned_in?
 	end
 end	
 
+=======
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 end

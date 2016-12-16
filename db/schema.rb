@@ -11,13 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20161213140753) do
+=======
+ActiveRecord::Schema.define(version: 20161104150646) do
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 
   create_table "areas", force: :cascade do |t|
     t.string   "area_name"
     t.integer  "postcode"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.float    "latitude"
     t.float    "longitude"
   end
@@ -25,6 +30,8 @@ ActiveRecord::Schema.define(version: 20161213140753) do
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+=======
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
   end
 
   create_table "comments", force: :cascade do |t|
@@ -45,6 +52,7 @@ ActiveRecord::Schema.define(version: 20161213140753) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+<<<<<<< HEAD
     t.float    "latitude"
     t.float    "longitude"
     t.string   "attachment"
@@ -57,6 +65,8 @@ ActiveRecord::Schema.define(version: 20161213140753) do
     t.integer  "cart_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+=======
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
   end
 
   create_table "order_details", force: :cascade do |t|
@@ -84,7 +94,10 @@ ActiveRecord::Schema.define(version: 20161213140753) do
     t.string   "image"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+<<<<<<< HEAD
     t.string   "attachment"
+=======
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
   end
 
   create_table "suppliers", force: :cascade do |t|
@@ -94,7 +107,10 @@ ActiveRecord::Schema.define(version: 20161213140753) do
     t.string   "image"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+<<<<<<< HEAD
     t.string   "attachment"
+=======
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
   end
 
   create_table "table_orders", force: :cascade do |t|

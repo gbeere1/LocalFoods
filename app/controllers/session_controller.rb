@@ -26,6 +26,7 @@ class SessionController < ApplicationController
   end
   
   
+<<<<<<< HEAD
   def suppliernew
   
   end
@@ -50,5 +51,7 @@ class SessionController < ApplicationController
   end
   
   
+=======
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
   
 end

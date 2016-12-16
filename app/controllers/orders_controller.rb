@@ -1,9 +1,13 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
   before_action :authorise, only: [:show, :edit, :update, :destroy]
+<<<<<<< HEAD
  
 
  # GET /orders
+=======
+  # GET /orders
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
   # GET /orders.json
   def index
     @orders = Order.all
@@ -26,6 +30,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+<<<<<<< HEAD
 		@order = Order.new(params[:order])
 		@order.add_lineitems_from_cart(current_cart)
 		@order.customer_id = @current_user.id
@@ -38,6 +43,15 @@ class OrdersController < ApplicationController
 				format.json {render json: @order,status: :created, location: @order}
       else
 		@cart=current_cart
+=======
+    @order = Order.new(order_params)
+
+    respond_to do |format|
+      if @order.save
+        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        format.json { render :show, status: :created, location: @order }
+      else
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
         format.html { render :new }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end

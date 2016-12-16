@@ -12,6 +12,7 @@
       </ul>
     </div>
   <% end %>
+<<<<<<< HEAD
   
   
   <div class="field">
@@ -20,6 +21,28 @@
   </div>
   
   
+=======
+
+  <div class="field">
+    <%= f.label :customer_id %><br>
+    <%= f.collection_select :customer_id, Customer.all, :id, :customer_name %>
+  </div>
+  <div class="field">
+    <%= f.label :order_price %><br>
+    <%= f.number_field :order_price %>
+  </div>
+  
+
+  
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :delivery_date %><br>
+    <%= f.date_select :delivery_date %>
+  </div>
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
   <div class="actions">
     <%= f.submit %>
   </div>

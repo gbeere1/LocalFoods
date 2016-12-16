@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 
 <p>
 <div class="container-fluid">  
 <div align="center">
   <%=image_tag(@supplier.attachment,:size=>"140x100")%>
+=======
+<p id="notice"><%= notice %></p>
+<p>
+<div class="container-fluid">  
+  <%=image_tag(@supplier.image,:size=>"120x90")%>
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 </p>
 <p>
   <strong>Supplier name:</strong>
@@ -14,6 +21,7 @@
   <%= @supplier.area.area_name %>
 </p>
 
+<<<<<<< HEAD
 
 
 
@@ -24,6 +32,19 @@
 		
 		<h4><%= product.product_name  %></h4><br>
 		<%=image_tag(product.attachment,:size=>"120x80")%>
+=======
+<p>
+  <strong>Password:</strong>
+  <%= @supplier.password_digest %>
+</p>
+
+<p>
+  <% @supplier.products.each do|product|%>
+		<br>
+		<%=image_tag(product.image,:size=>"80x50")%>
+		<%= product.product_name  %>
+		
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 		
 		</br>
 	<%end%>	
@@ -32,5 +53,8 @@
 
 <%= link_to 'Edit', edit_supplier_path(@supplier) %> |
 <%= link_to 'Back', suppliers_path %>
+<<<<<<< HEAD
 </div>
+=======
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 </div>

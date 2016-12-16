@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   
   
+<<<<<<< HEAD
   get 'shop/index'
   resources :lineitems
 
@@ -16,16 +17,24 @@ Rails.application.routes.draw do
   get 'search', :to=>'products#search'
   get 'shop', :to=>'shop#index'
   
+=======
+  resources :order_details
+  resources :orders
+  resources :comments
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
   controller :session do
        get 'login' => :new 
 	   post 'login' => :create
 	   get 'logout' => :destroy
 	   delete 'logout' => :destroy
+<<<<<<< HEAD
 	   
 	   get 'supplierlogin' => :suppliernew
 	   post 'supplierlogin' => :suppliercreate
 	   get 'supplierlogout' => :supplierdestroy
 	   delete 'supplierlogout' => :supplierdestroy
+=======
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
   end
 
   resources :customers
@@ -48,7 +57,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'pages#home'
+<<<<<<< HEAD
   #root 'shop#index'
+=======
+>>>>>>> 1e77c868ae87334476b10fa5e04ff50fd0a71ed4
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
